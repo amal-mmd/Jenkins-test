@@ -1,11 +1,13 @@
 node {
     stage('Clone') {
-        git 'https://github.com/amal-mhd/jenkins-helloworld.git'
+        git branch: 'main', url: 'https://github.com/amal-mmd/Jenkins-test.git'
     }
     stage('Build') {
-        sh label: '', script: 'javac Main.java'
+        sh '''javac Main.java
+           '''
     }
     stage('Run') {
-        sh label: '', script: 'java Main'
+        sh '''java Main
+           '''
     }
 }
